@@ -49,7 +49,9 @@ class ViewController: UIViewController {
         
         let message = "랜덤 숫자값은 \(randomNum)입니다"
         let alert = UIAlertController(title: "title1", message: message,preferredStyle: .alert)
-        let action = UIAlertAction(title: "title2", style:.default, handler: nil)
+        let action = UIAlertAction(title: "title2", style:.default, handler: {_ in
+            self.swich3.setOn(true, animated: true)
+        })
         alert.addAction(action)
         
         textTest.text = "$\(randomNum)"
